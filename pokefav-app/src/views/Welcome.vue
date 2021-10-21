@@ -16,7 +16,6 @@
                 <p class="welcome__text my-8">The digital encyclopedia created by Professor Oak is an invaluable tool to Trainers in the Pokémon world.</p>
                 <v-btn
                   class="btn-red"
-                  color="#F22539"
                   rounded
                   dark
                   to="/List"
@@ -45,9 +44,7 @@
 
   }
 
-  .btn-red{
-    background: #F22539;
-  }
+ 
   
 </style>
 

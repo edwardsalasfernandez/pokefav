@@ -15,5 +15,13 @@ npm run serve
 npm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Dependencias
+
+  *  "axios": "^0.23.0",
+  *  "core-js": "^3.6.5",
+  *  "vue": "^2.6.14",
+  *  "vue-router": "^3.5.2",
+  *  "vuetify": "^2.3.10"
+
+
+

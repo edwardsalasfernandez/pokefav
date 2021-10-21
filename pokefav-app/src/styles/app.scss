@@ -4,6 +4,15 @@ body,.theme--light.v-application{
     font-family: 'Lato', sans-serif;
 }
 
+.v-btn.btn-red{
+    background: #F22539 !important;
+    height: 44px;
+    max-width: 220px;
+    &:hover,&.active{
+        background: #C00E !important
+    }
+  }
+
 .modal__pokemon-img{
     position: relative;
     z-index: 1;
@@ -62,5 +71,13 @@ body,.theme--light.v-application{
         background: #FFFFFF;
         border-radius: 5px;
         margin-bottom: 10px;
+    }
+}
+
+.detail-pokemon{
+    padding: 30px;
+    .v-card__text{
+        padding-bottom: 10px !important;
+        padding-top: 10px !important;
     }
 }

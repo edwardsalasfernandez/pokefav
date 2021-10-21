@@ -1,6 +1,6 @@
 <template>
   <div class="List fill-height">
-    <loading v-if="loading"></loading>
+    <loading v-if="haspokemons"></loading>
     <v-container v-else class="" fluid fill-height>
       <v-row class="fill-height align-content-space-between justify-center">
         <v-col lg="6">
@@ -76,21 +76,21 @@
                 :src="pokemon.sprites.front_default"
               ></v-img>
             </div>
-            <v-card>
-              <v-card-text class="pa-0 text-capitalize">
-                Name: {{ pokemon.name }}
+            <v-card class="detail-pokemon">
+              <v-card-text class=" text-capitalize">
+                <b>Name:</b> {{ pokemon.name }}
               </v-card-text>
               <v-divider></v-divider>
-              <v-card-text class="pa-0 text-capitalize">
-                Weight: {{ pokemon.weight }}
+              <v-card-text class=" text-capitalize">
+                <b>Weight:</b> {{ pokemon.weight }}
               </v-card-text>
               <v-divider></v-divider>
-              <v-card-text class="pa-0 text-capitalize">
-                Height: {{ pokemon.height }}
+              <v-card-text class=" text-capitalize">
+                <b>Height:</b> {{ pokemon.height }}
               </v-card-text>
               <v-divider></v-divider>
-              <v-card-text v-if="pokemon.types" class="pa-0 text-capitalize">
-                Types:
+              <v-card-text v-if="pokemon.types" class=" text-capitalize">
+                <b>Types:</b>
                 {{
                   pokemon.types
                     .map((el) => {
@@ -103,7 +103,7 @@
 
               <v-card-actions class="mt-5">
                 <v-btn
-                  color="primary"
+                  color="btn-red"
                   class="text-capitalize"
                   dark
                   rounded
