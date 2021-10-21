@@ -1,6 +1,6 @@
 <template>
   <div class="List fill-height">
-    <loading v-if="haspokemons"></loading>
+    <loading v-if="loading"></loading>
     <v-container v-else class="" fluid fill-height>
       <v-row class="fill-height align-content-space-between justify-center">
         <v-col lg="6">
@@ -151,8 +151,14 @@ export default {
     };
   },
   created: function() {
-    //    this.loading = false;
-    this.getPokemons();
+    //   
+    let thisVue = this; 
+    this.getPokemons().then( e => {
+         setTimeout(function(){
+                    thisVue.loading = false;
+
+        }, 600);
+    });
   },
   methods: {
     async getData(url) {
@@ -243,21 +249,8 @@ export default {
      
     }
   },
-  watch: {
-    // getPokemon() {
-    //     this.pokemon = Object.assign({}, this.pokemon);
-    // }
-  },
   computed: {
-    haspokemons() {
-      if (this.pokemons.length > 0) {
-        this.loading = false;
-        return false;
-      } else {
-        this.loading = true;
-        return true;
-      }
-    },
+
     filterPokemons() {
       let pokemonsFiltered = this.pokemons;
 
