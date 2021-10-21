@@ -17,3 +17,50 @@ body,.theme--light.v-application{
         margin: auto;
     }
 }
+
+.toolbar-nav{
+    position: fixed;
+    width: 100%;
+    height: 80px !important;
+    background: #FFFFFF;
+    box-shadow: 0px -5px 4px rgba(0, 0, 0, 0.05);
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    .v-toolbar__content{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100% !important;
+        width: 100%;
+        @media screen and (min-width: 768px) {
+            width: 50%;
+        }
+
+
+        .btn-toolbar-nav{
+            background: #BFBFBF;
+            width: 50%;
+            @media screen and (min-width: 768px) {
+                width: 85%;
+            }
+            height: 44px;
+            max-width: 220px;
+            &:hover,&.active{
+                background: #F22539
+            }
+        }
+    }
+}
+
+.list-pokemons{
+    padding-bottom: 90px;
+    background: transparent !important;
+
+    .v-list-item{
+        background: #FFFFFF;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+}
