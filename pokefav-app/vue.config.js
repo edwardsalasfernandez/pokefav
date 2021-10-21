@@ -1,3 +1,3 @@
 module.exports = {
-    publicPath: '/pokefav',
+    publicPath: '/pokefav/dist',
 }
